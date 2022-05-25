@@ -12,20 +12,8 @@
 ![123_1234_matches](https://user-images.githubusercontent.com/73326932/168055123-c43603cf-4015-4544-9fd8-d648dea203f4.png)
 
 ## DATASET
-Download the COCO2014 dataset files for training
 
-* **Training Dataset**
-``` 
-wget http://images.cocodataset.org/zips/train2014.zip
-```
-* **Validation Dataset**
-```
-wget http://images.cocodataset.org/zips/val2014.zip
-```
-* **Test Dataset**
-```
-wget http://images.cocodataset.org/zips/test2014.zip
-```
+``` assets/scannet_sample_images``` Scannet_sample_images dataset files 사용  
 
 ## Dependencies
 * Python 3
@@ -35,18 +23,6 @@ wget http://images.cocodataset.org/zips/test2014.zip
 * NumPy >= 1.18
 
 simple run : ```pip3 install numpy opencv-python torch matplotlib```
-
-## Contents
-
-### Training
-```
-python3 train.py
-```
-
-### Additional useful command line parameters
-```--epoch``` : epoch의 수 (default : 20)    
-```--train_path``` : training images 폴더의 path ex) /home/ubuntu/SuperGlue-pytorch/train2014/
-```--eval_output_dir``` : output 폴더 경로 설정 (defalut : dump_match_pairs/)
 
 
 ### Visualization
@@ -59,11 +35,10 @@ python3 train.py
 ./match_pairs.py
 ```
 
-### Get Result file({}_evaluation.npz in eval_output_di path)
+### Get Result file({}.npy in path)
 ```
 ./match_pairs.py --viz --eval --max_keypoints 1024
 ```
-
 
 
 ### 참고자료
